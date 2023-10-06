@@ -8,3 +8,7 @@ It will as you :
   Enter User ID (or type exit to exit):
 Until you type exit it will keep asking you the user id.
 
+For Running Api-employeeData.py
+python Api-employeeData.py
+Open browser and put this in Address bar http://localhost:5000/userid?id=ID 
+ex. http://localhost:5000/userid?id=2
