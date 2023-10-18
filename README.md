@@ -8,7 +8,7 @@ To run this python file :
 
 python employeeData.py
 
-It will as you : 
+It will ask you : 
 
   Enter User ID (or type exit to exit):
   
@@ -41,13 +41,13 @@ localhost:5000/userid?id=1 --> to see the details for user id 1
 ###3.1 To Deploy the API as POD
 ==================================================================================================================================================
 
-Its time to land on everyones favorite kubernetes, and as its a demo for now I am using minikube on my windows system:
+Its time to land on everyone’s favourite Kubernetes, and as its a demo for now I am using minikube on my windows system:
 
 To start minikube : minikube start
 
-To Deploythe Application I have made it very simple so we need only two things :
+To Deploy the Application I have made it very simple so we need only two things :
 
-1. Deployement
+1. Deployment
 2. Service
 Create a namespace with name employeedata : kubectl create ns employeedata
 
