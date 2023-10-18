@@ -2,6 +2,7 @@
 ###1.1
 # GameOfK8
 Here I will show how to build a small python tool, writing basic of docker files, Deployments and all.
+==================================================================================================================================================
 pre-requisite:
   Python 
 To run this python file :
@@ -13,18 +14,21 @@ For Running Api-employeeData.py
 python Api-employeeData.py
 Open browser and put this in Address bar http://localhost:5000/userid?id=ID 
 ex. http://localhost:5000/userid?id=2
+
+
+###2.1 To dockerized the API 
 ==================================================================================================================================================
 
-Docker
-==================================================================================================================================================
-###2.1
 Too create docker image out of Docker file : docker build -t APPNAME .
 To Check the docker image : docker images
 To run the docker container on 5000 : docker run -d -p 5000:5000 APPNAME
 Once you see container is up and running, go to the browser and hit : 
 localhost:5000/health  --> To check the app status
 localhost:5000/userid?id=1 --> to see the details for user id 1
-###3.1
+
+###3.1 To Deploy the API as POD
+==================================================================================================================================================
+
 Its time to land on everyones favorite kubernetes, and as its a demo for now I am using minikube on my windows system:
 To start minikube : minikube start
 To Deploythe Application I have made it very simple so we need only two things :
