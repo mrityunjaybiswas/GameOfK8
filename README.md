@@ -1,7 +1,4 @@
-=================================================================================================================================================
-###1.1
-# GameOfK8
-Here I will show how to build a small python tool, writing basic of docker files, Deployments and all.
+###1.1 Here I will show how to build a small python tool, writing basic of docker files, Deployments and all.
 ==================================================================================================================================================
 pre-requisite:
   Python 
@@ -30,6 +27,7 @@ localhost:5000/userid?id=1 --> to see the details for user id 1
 ==================================================================================================================================================
 
 Its time to land on everyones favorite kubernetes, and as its a demo for now I am using minikube on my windows system:
+
 To start minikube : minikube start
 To Deploythe Application I have made it very simple so we need only two things :
 1. Deployement
@@ -40,5 +38,4 @@ To make the service available outside : minikube service employeeapp-service -n 
 From the above command you will get the ip to access the application from the browser, and then you will need to type :
 http://127.0.0.1:60075/health --> To test the application running or not.
 http://127.0.0.1:60075/userid?id=8 --> To see the details for userid 8
-======================================================================================================================================================
 
