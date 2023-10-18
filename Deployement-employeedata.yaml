@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: employeeapp
+  namespace: employeedata
+  labels:
+    app: employeeapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: employeeapp
+  template:
+    metadata:
+      labels:
+        app: employeeapp
+    spec:
+      containers:
+      - name: employeeapp
+        image: mrityunjaybiswas/employeeapp:v1
+        ports:
+        - containerPort: 5000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: employeeapp-service
+  namespace: employeedata
+spec:
+  selector:
+    app: employeeapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+  type: NodePort

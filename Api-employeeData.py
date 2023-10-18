@@ -3,7 +3,7 @@ import json
 
 app = Flask(__name__)
 
-location = "D:\PythonProjects\GameOfK8\empData.json"
+location = "empData.json"
 
 def get_data(location):
     try:
@@ -19,6 +19,10 @@ def get_employee_data(user_data, emp_id):
         if user.get('id') == emp_id:
             return user
     return None  
+
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({"status": "ok"})
 
 @app.route('/userid', methods=['GET'])
 def getDetails():
